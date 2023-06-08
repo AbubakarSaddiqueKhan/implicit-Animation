@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_implicit_animation/animated_align.dart';
+import 'package:flutter_implicit_animation/animated_containner.dart';
+import 'package:flutter_implicit_animation/animated_cross_fade.dart';
+import 'package:flutter_implicit_animation/animated_default_text_style.dart';
+import 'package:flutter_implicit_animation/animated_fractionally_sized_box.dart';
+import 'package:flutter_implicit_animation/animated_opacity.dart';
+import 'package:flutter_implicit_animation/animated_padding.dart';
+import 'package:flutter_implicit_animation/animated_positioned.dart';
+import 'package:flutter_implicit_animation/animated_rotation.dart';
+import 'package:flutter_implicit_animation/animated_size.dart';
+import 'package:flutter_implicit_animation/animated_slide.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,15 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[AnimatedAlignExample()],
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      ),
-    );
+        body: Center(child: AnimatedFractionallySizedBoxExample()));
   }
 }

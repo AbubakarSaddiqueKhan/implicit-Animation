@@ -23,10 +23,14 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
           height: 300,
           color: Colors.white,
           child: AnimatedAlign(
-            alignment: isSelected ? Alignment.topLeft : Alignment.bottomRight,
+            alignment: isSelected ? Alignment.bottomLeft : Alignment.topRight,
             duration: Duration(seconds: 1),
-            curve: Curves.fastOutSlowIn,
-            child: FlutterLogo(size: 50.0),
+            curve: Curves.easeInOut,
+            child: Container(
+              width: 10,
+              height: 10,
+              color: Colors.red,
+            ),
           ),
         ),
       ),
